@@ -2,3 +2,4 @@
 gunicorn
 # for postgres
 psycopg2
+libvirt-python

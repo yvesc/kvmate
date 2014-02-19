@@ -25,6 +25,7 @@ def resetdb():
         abort('Aborting at user request.')
     stop_gunicorn()
     stop_huey()
+    #FIXME: Use db name from django settings
     sudo('dropdb kvmate', user='postgres')
     sudo('createdb kvmate -O kvmate', user='postgres')
     syncdb()

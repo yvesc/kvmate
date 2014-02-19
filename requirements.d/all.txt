@@ -4,4 +4,5 @@ django-braces
 django-bootstrap-form
 # huey
 huey
+redis
 numpy

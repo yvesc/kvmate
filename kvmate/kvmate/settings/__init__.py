@@ -7,6 +7,7 @@ if os.environ.get('PROD'):
     logging.info('Using production settings')
     from .production import *
 else:
+    logging.info('Using development settings')
     from .dev import *
 
 try:

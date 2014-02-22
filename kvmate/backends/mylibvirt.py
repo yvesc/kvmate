@@ -158,7 +158,7 @@ class LibvirtBackend(object):
                 self.logger.error('reboot failed for %s with:' % host.name)
                 self.logger.error(e.get_error_message())
                 return -1
-            self.terminate_vnc(host)
+            self._terminate_vnc(host)
         self.logger.info('reboot run for %s' % host.name)
         return 0 # all is fine
 
@@ -178,7 +178,7 @@ class LibvirtBackend(object):
                 self.logger.error('shutdown failed for %s with:' % host.name)
                 self.logger.error(e.get_error_message())
                 return -1
-            self.terminate_vnc(host)
+            self._terminate_vnc(host)
         self.logger.info('shutdown run for %s' % host.name)
         return 0 # all is fine
 
@@ -198,7 +198,7 @@ class LibvirtBackend(object):
                 self.logger.error('destroy failed for %s with:' % host.name)
                 self.logger.error(e.get_error_message())
                 return -1
-            self.terminate_vnc(host)
+            self._terminate_vnc(host)
         self.logger.info('destroy run for %s' % host.name)
         return 0 # all is fine
 

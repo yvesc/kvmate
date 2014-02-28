@@ -1,3 +1,5 @@
+# for postgres
+psycopg2
 # django with extensions
 django==1.6
 django-braces

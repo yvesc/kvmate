@@ -1,5 +1,3 @@
 -r all.txt
 gunicorn
-# for postgres
-psycopg2
 libvirt-python
